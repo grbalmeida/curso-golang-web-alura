@@ -17,7 +17,8 @@ func Index(w http.ResponseWriter, r *http.Request) {
 }
 
 func New(w http.ResponseWriter, r *http.Request) {
-	templates.ExecuteTemplate(w, "New", nil)
+	produto := models.Produto{Nome: "", Descricao: ""}
+	templates.ExecuteTemplate(w, "New", produto)
 }
 
 func Insert(w http.ResponseWriter, r *http.Request) {
