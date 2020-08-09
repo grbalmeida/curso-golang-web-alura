@@ -9,12 +9,13 @@
                     <p class="lead">Insira os dados para atualizar ou editar</p>
                 </div>
             </div>
-            <form method="POST" action="insert">
+            <form method="POST" action="update">
+                <input type="hidden" name="id" value="{{.Id}}">
                 <div class="row">
                     <div class="col-sm-8">
                         <div class="form-group">
                             <label for="nome">Nome:</label>
-                            <input type="text" name="nome" class="form-control">
+                            <input type="text" name="nome" value="{{.Nome}}" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -22,7 +23,7 @@
                     <div class="col-sm-8">
                         <div class="form-group">
                             <label for="descricao">Descrição:</label>
-                            <input type="text" name="descricao" class="form-control">
+                            <input type="text" name="descricao" value="{{.Descricao}}" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -30,7 +31,7 @@
                     <div class="col-sm-2">
                         <div class="form-group">
                             <label for="preco">Preço:</label>
-                            <input type="number" name="preco" class="form-control" step="0.01">
+                            <input type="number" name="preco" value="{{.Preco}}" class="form-control" step="0.01">
                         </div>
                     </div>
                 </div>
@@ -39,7 +40,7 @@
                     <div class="col-sm-2">
                         <div class="form-group">
                             <label for="quantidade">Quantidade:</label>
-                            <input type="number" name="quantidade" class="form-control">
+                            <input type="number" name="quantidade" value="{{.Quantidade}}" class="form-control">
                         </div>
                     </div>
                 </div>
